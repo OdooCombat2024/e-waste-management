@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { LandingPage } from './components/landing-page/LandingPage';
+import LoginForm from './components/login-page/LoginPage';
+import RegisterForm from './components/registration-page/RegisterForm';
+import RecyclersDashboard from './components/recyclers/components/dashboard/RecyclersDashboard';
+import UserList from './components/recyclers/components/user-list/UserList';
 
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/recyclers" element={<RecyclersDashboard />} />
+          <Route path="/recyclers/userlist" element={<UserList />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
+ 
 export default App;
