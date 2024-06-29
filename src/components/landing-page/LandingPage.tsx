@@ -19,7 +19,6 @@ export const LandingPage: React.FC = () => {
         </header>
         <main>
           <h1>Welcome to Our Landing Page</h1>
-          <p>Your main content goes here.</p>
         </main>
       </div>
     </div>

@@ -1,11 +1,25 @@
 import React, { CSSProperties } from 'react';
- 
+import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const RegisterForm: React.FC = () => {
+    const navigate = useNavigate();
+
     const handleRegister = (event: React.FormEvent) => {
         event.preventDefault();
-        // Handle register logic here
+        toast.success('Registration successful!', {
+            position: 'top-right',
+            autoClose: 3000, // Close the toast after 3 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+        navigate('/recyclers');
     };
- 
+
     return (
         <div style={styles.container}>
             <div style={styles.formContainer}>
@@ -45,7 +59,7 @@ const RegisterForm: React.FC = () => {
         </div>
     );
 };
- 
+
 const styles: { [key: string]: CSSProperties } = {
     container: {
         display: 'flex',
@@ -66,7 +80,7 @@ const styles: { [key: string]: CSSProperties } = {
         color: '#333',
     },
     input: {
-        width: '100%',
+        width: '90%',
         padding: '10px',
         margin: '10px 0',
         border: '1px solid #ccc',
@@ -83,6 +97,5 @@ const styles: { [key: string]: CSSProperties } = {
         cursor: 'pointer',
     },
 };
- 
+
 export default RegisterForm;
- 

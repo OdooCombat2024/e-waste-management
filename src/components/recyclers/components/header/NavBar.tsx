@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme } from 'antd';
+import { Avatar, Layout, Menu, theme } from 'antd';
 import { UserServices } from '../user-services/UserServices'; // Adjust the import path as needed
 import UserList from '../user-list/UserList';
  
@@ -13,9 +13,8 @@ const items = [
 ];
  
 const services = [
-  { title: 'Service 1', description: 'Description of Service 1' },
-  { title: 'Service 2', description: 'Description of Service 2' },
-  { title: 'Service 3', description: 'Description of Service 3' },
+  { title: 'Keyboard', description: 'We provide service for recycle Keyboard', avatar:'./keyboard.jpg' },
+  { title: 'Monitor', description: 'We provide service for recycle Monitor', avatar:'./monitor.jpg' },
 ];
  
 const NavBar: React.FC = () => {

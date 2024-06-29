@@ -17,7 +17,6 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/recyclers" element={<RecyclersDashboard />} />
-          <Route path="/recyclers/userlist" element={<UserList />} />
         </Routes>
       </div>
     </Router>
